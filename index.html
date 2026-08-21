@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>19KEYS — Global Futurist · Thought Leader · Builder of Worlds</title>
+<meta name="description" content="The official world of 19Keys — futurist, AI educator, and host of High Level Conversations. Enter Ziion, the tour, Supermind, the fashion houses, Africa Plus, and the frameworks shaping what comes next.">
+<meta property="og:title" content="19KEYS — The Future Is In Session">
+<meta property="og:description" content="One door into every world 19Keys is building: Ziion, High Level Conversations, AI, fashion, Africa Plus, Supermind, and the tour.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://19keys.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============ 19KEYS DESIGN SYSTEM — V2 ============ */
+:root{
+  --ink:#0a0a09;
+  --ink-2:#101010;
+  --ink-3:#161615;
+  --paper:#f2f0ea;
+  --paper-dim:#c7c4bc;
+  --silver:#9ba0a8;
+  --mute:#5c5e63;
+  --red:#d90429;
+  --red-hi:#ff2d47;
+  --red-dim:rgba(217,4,41,.3);
+  --gold:#c9a24f;
+  --line:rgba(242,240,234,.10);
+  --f-display:'Anton',Impact,sans-serif;
+  --f-serif:'Cormorant Garamond',Georgia,serif;
+  --f-body:'Space Grotesk',Helvetica,Arial,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,monospace;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --pad:clamp(20px,5vw,72px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{background:var(--ink)}
+body{
+  font-family:var(--f-body);color:var(--paper);
+  font-weight:300;line-height:1.7;letter-spacing:.01em;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--red);color:var(--paper)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
+input,select,textarea{font:inherit}
+
+/* grain */
+body::after{
+  content:"";position:fixed;inset:-50%;pointer-events:none;z-index:2000;opacity:.045;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 7s steps(10) infinite;
+}
+@keyframes grain{0%,100%{transform:translate(0,0)}20%{transform:translate(-3%,4%)}40%{transform:translate(3%,-2%)}60%{transform:translate(-2%,-4%)}80%{transform:translate(4%,2%)}}
+
+/* ============ CURSOR ============ */
+.cur-dot,.cur-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:3000;border-radius:50%;will-change:transform}
+.cur-dot{width:6px;height:6px;background:var(--red);margin:-3px 0 0 -3px}
+.cur-ring{width:34px;height:34px;border:1px solid rgba(155,160,168,.4);margin:-17px 0 0 -17px;transition:width .25s,height .25s,margin .25s,border-color .25s}
+body.cur-hover .cur-ring{width:58px;height:58px;margin:-29px 0 0 -29px;border-color:var(--red)}
+@media (pointer:coarse){.cur-dot,.cur-ring{display:none}}
+
+/* ============ PRELOADER ============ */
+#loader{position:fixed;inset:0;background:var(--ink);z-index:5000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;transition:opacity .8s var(--ease),visibility .8s}
+#loader.done{opacity:0;visibility:hidden}
+#loader .num{font-family:var(--f-display);font-size:clamp(60px,10vw,120px);color:var(--paper);line-height:1;letter-spacing:.02em}
+#loader .key{height:clamp(110px,20vh,190px);width:auto;animation:kpulse 1.6s var(--ease) infinite}
+@keyframes kpulse{0%,100%{opacity:.85;transform:scale(1)}50%{opacity:1;transform:scale(1.04)}}
+#loader .lbl{font-family:var(--f-mono);font-size:11px;letter-spacing:.5em;color:var(--silver);text-transform:uppercase}
+#loader .bar{width:min(280px,60vw);height:1px;background:var(--line);position:relative;overflow:hidden}
+#loader .bar i{position:absolute;inset:0;background:var(--red);transform-origin:left;transform:scaleX(0)}
+
+/* ============ NAV ============ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:22px var(--pad);
+  transition:transform .5s var(--ease),background .5s;
+}
+nav.scrolled{background:linear-gradient(rgba(10,10,9,.96) 40%,rgba(10,10,9,.55) 75%,rgba(10,10,9,0));backdrop-filter:blur(8px)}
+nav.hid{transform:translateY(-110%)}
+.brand{font-family:var(--f-display);font-size:22px;letter-spacing:.14em;color:var(--paper);display:flex;align-items:center;gap:12px}
+.brand em{color:var(--red);font-style:normal}
+.brand .klogo{height:26px;width:auto;display:block}
+.nav-links{display:flex;gap:34px;align-items:center}
+.nav-links a{font-family:var(--f-mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--silver);position:relative;padding:4px 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--red);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
+.nav-links a:hover{color:var(--paper)}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+.btn-passport{
+  font-family:var(--f-mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--paper);background:var(--red);padding:12px 22px;
+  display:inline-block;position:relative;overflow:hidden;transition:color .35s;
+}
+.btn-passport span{position:relative;z-index:1}
+.btn-passport::before{content:"";position:absolute;inset:0;background:var(--paper);transform:translateY(101%);transition:transform .45s var(--ease)}
+.btn-passport:hover{color:var(--ink)}
+.btn-passport:hover::before{transform:translateY(0)}
+@media(max-width:860px){.nav-links a{display:none}.nav-links .btn-passport{display:inline-block}}
+
+#progress{position:fixed;top:0;left:0;height:2px;background:var(--red);width:0;z-index:1001}
+
+/* ============ SIDE HUD ============ */
+.hud{position:fixed;left:26px;bottom:32px;z-index:900;display:flex;flex-direction:column;gap:10px;font-family:var(--f-mono);font-size:9px;letter-spacing:.3em;color:var(--mute);text-transform:uppercase;mix-blend-mode:difference}
+.hud .v{writing-mode:vertical-rl;transform:rotate(180deg)}
+@media(max-width:860px){.hud{display:none}}
+
+/* ============ GENERIC ============ */
+section{position:relative}
+.wrap{padding-left:var(--pad);padding-right:var(--pad);max-width:1460px;margin:0 auto}
+.k-label{font-family:var(--f-mono);font-size:10px;letter-spacing:.5em;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:14px}
+.k-label::before{content:"";width:44px;height:1px;background:var(--red)}
+.serif{font-family:var(--f-serif);font-style:italic;font-weight:400;color:var(--paper-dim)}
+.rv{opacity:0;transform:translateY(44px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.on{opacity:1;transform:none}
+.rv-d1{transition-delay:.1s}.rv-d2{transition-delay:.22s}.rv-d3{transition-delay:.34s}.rv-d4{transition-delay:.46s}
+.h2{font-family:var(--f-display);font-weight:400;font-size:clamp(46px,7vw,116px);line-height:.95;text-transform:uppercase;color:var(--paper)}
+.h2 em{font-style:normal;color:var(--red)}
+
+/* ============ HERO ============ */
+#hero{height:200vh}
+.hero-pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center}
+#dust{position:absolute;inset:0;z-index:1}
+.hero-type{position:relative;z-index:3;text-align:center}
+.hero-type h1{
+  font-family:var(--f-display);font-weight:400;
+  font-size:clamp(88px,17vw,330px);line-height:.92;color:var(--paper);
+  display:flex;justify-content:center;
+}
+.hero-type h1 .ch{display:inline-block;will-change:transform,opacity}
+.hero-type h1 .g{color:var(--red)}
+.hero-sub{margin-top:26px;font-family:var(--f-mono);font-size:clamp(9px,1.2vw,12px);letter-spacing:.6em;text-transform:uppercase;color:var(--silver)}
+.hero-serif{margin-top:14px;font-size:clamp(20px,2.6vw,34px)}
+.hero-cta{margin-top:44px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+.btn-ghost{
+  font-family:var(--f-mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--paper);border:1px solid var(--line);padding:14px 26px;transition:border-color .4s,color .4s;display:inline-block;
+}
+.btn-ghost:hover{border-color:var(--red);color:var(--red-hi)}
+.hero-plate{position:absolute;z-index:2;right:6vw;bottom:-4vh;width:clamp(200px,25vw,400px);will-change:transform,opacity;opacity:.92}
+.hero-plate img{filter:grayscale(1) contrast(1.05);border:1px solid var(--line)}
+.hero-plate .cap{font-family:var(--f-mono);font-size:9px;letter-spacing:.3em;color:var(--mute);margin-top:10px;text-transform:uppercase}
+.hero-coord{position:absolute;z-index:2;left:6vw;top:16vh;font-family:var(--f-mono);font-size:10px;letter-spacing:.3em;color:var(--mute);text-transform:uppercase;line-height:2.2}
+.hero-scroll{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:3;font-family:var(--f-mono);font-size:9px;letter-spacing:.5em;color:var(--mute);text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:12px}
+.hero-scroll i{display:block;width:1px;height:52px;background:linear-gradient(var(--red),transparent);animation:drop 2s var(--ease) infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media(max-width:860px){.hero-plate{display:none}.hero-coord{display:none}#hero{height:145vh}}
+
+/* ============ PATH STRIP (funnel) ============ */
+.path{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink-2)}
+.path .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.path a{padding:22px 18px;display:flex;flex-direction:column;gap:6px;border-left:1px solid var(--line);transition:background .4s}
+.path a:first-child{border-left:none}
+.path a:hover{background:var(--ink-3)}
+.path .s{font-family:var(--f-mono);font-size:9px;letter-spacing:.35em;color:var(--red);text-transform:uppercase}
+.path .t{font-family:var(--f-body);font-weight:400;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--paper-dim);display:flex;align-items:center;gap:8px}
+.path .t::after{content:"→";color:var(--mute);transition:transform .35s var(--ease),color .35s}
+.path a:hover .t{color:var(--paper)}
+.path a:hover .t::after{transform:translateX(5px);color:var(--red)}
+@media(max-width:860px){.path .wrap{grid-template-columns:1fr 1fr;padding:0}.path a:nth-child(3){border-left:none}}
+
+/* ============ MANIFESTO ============ */
+#manifesto{padding:clamp(90px,12vw,160px) 0;overflow:hidden}
+.man-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(30px,5vw,64px);align-items:center}
+.man-words{display:flex;flex-direction:column;gap:2px}
+.man-words .w{
+  font-family:var(--f-display);font-size:clamp(54px,8.5vw,150px);line-height:1;
+  color:transparent;-webkit-text-stroke:1px var(--mute);text-transform:uppercase;
+  transition:color .7s var(--ease),-webkit-text-stroke-color .7s,transform .7s var(--ease);
+  transform:translateX(-20px);
+}
+.man-words .w.on{color:var(--paper);-webkit-text-stroke-color:transparent;transform:none}
+.man-words .w.on.gg{color:var(--red)}
+.man-copy p{max-width:44ch;color:var(--paper-dim);font-size:clamp(15px,1.3vw,17px)}
+.man-copy .serif{display:block;font-size:clamp(22px,2.2vw,30px);margin-bottom:22px;color:var(--paper)}
+.man-portrait{margin-top:34px;width:min(300px,70%);position:relative}
+.man-portrait img{filter:grayscale(1) contrast(1.02);border:1px solid var(--line)}
+.man-portrait::after{content:"FRAMEWORKS FOR HIGHER THINKING";position:absolute;left:-10px;bottom:18px;font-family:var(--f-mono);font-size:9px;letter-spacing:.35em;color:var(--red);writing-mode:vertical-rl;transform:rotate(180deg)}
+@media(max-width:960px){.man-grid{grid-template-columns:1fr}}
+
+/* highlight sweep */
+.hl{position:relative;color:var(--paper);background:linear-gradient(transparent 62%,rgba(217,4,41,.38) 62%)}
+
+/* ============ STATS ============ */
+#stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink-2);position:relative;overflow:hidden}
+#stats .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.14;filter:grayscale(1) contrast(1.1)}
+#stats .stats-grid{position:relative;z-index:1}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:clamp(30px,3.6vw,56px) var(--sp-3,24px);border-left:1px solid var(--line)}
+.stat:first-child{border-left:none}
+.stat .n{font-family:var(--f-display);font-size:clamp(36px,4.4vw,72px);color:var(--paper);line-height:1}
+.stat .n b{color:var(--red);font-weight:400}
+.stat .t{font-family:var(--f-mono);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--mute);margin-top:12px}
+@media(max-width:860px){.stats-grid{grid-template-columns:repeat(2,1fr)}.stat:nth-child(3){border-left:none}}
+
+/* ============ WORLD INDEX (minimal rows) ============ */
+#world{padding:clamp(90px,12vw,160px) 0}
+.world-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:clamp(36px,5vw,64px);flex-wrap:wrap}
+.world-head .serif{font-size:clamp(17px,1.7vw,24px);max-width:34ch;text-align:right}
+.index{border-top:1px solid var(--line)}
+.irow{border-bottom:1px solid var(--line)}
+.irow-head{
+  display:grid;grid-template-columns:64px 1fr auto 44px;gap:clamp(12px,2.6vw,40px);align-items:center;
+  width:100%;text-align:left;padding:clamp(18px,2.2vw,28px) 6px;
+  transition:background .4s,padding-left .4s var(--ease);
+}
+.irow-head:hover{background:var(--ink-2);padding-left:20px}
+.irow .no{font-family:var(--f-mono);font-size:11px;letter-spacing:.3em;color:var(--mute);transition:color .35s}
+.irow-head:hover .no{color:var(--red)}
+.irow .nm{font-family:var(--f-display);font-weight:400;font-size:clamp(22px,3.2vw,46px);line-height:1;letter-spacing:.03em;text-transform:uppercase;color:var(--paper);transition:color .35s;display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.irow .nm .tg{font-family:var(--f-serif);font-style:italic;font-size:clamp(13px,1.2vw,16px);letter-spacing:0;text-transform:none;color:var(--mute);transition:color .35s}
+.irow-head:hover .nm{color:var(--paper)}
+.irow-head:hover .nm .tg{color:var(--silver)}
+.irow .cat{font-family:var(--f-mono);font-size:9px;letter-spacing:.3em;color:var(--mute);text-transform:uppercase;white-space:nowrap}
+.irow .pm{width:30px;height:30px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--f-mono);font-size:14px;color:var(--silver);transition:all .4s var(--ease);justify-self:end}
+.irow-head:hover .pm{border-color:var(--red);color:var(--red)}
+.irow.open .pm{transform:rotate(45deg);border-color:var(--red);color:var(--red)}
+.irow-body{max-height:0;overflow:hidden;transition:max-height .6s var(--ease)}
+.irow-inner{padding:6px 6px clamp(26px,3vw,40px) calc(64px + clamp(12px,2.6vw,40px));display:flex;flex-direction:column;gap:18px}
+.irow-inner p{color:var(--paper-dim);font-size:14.5px;max-width:62ch}
+.ilinks{display:flex;gap:12px;flex-wrap:wrap}
+.ilink{
+  font-family:var(--f-mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;
+  border:1px solid var(--line);padding:11px 18px;color:var(--paper);
+  transition:border-color .35s,color .35s,background .35s;display:inline-flex;gap:10px;align-items:center;
+}
+.ilink::after{content:"→";color:var(--red)}
+.ilink:hover{border-color:var(--red);background:rgba(217,4,41,.06)}
+.ilink.solid{background:var(--red);border-color:var(--red);color:var(--paper)}
+.ilink.solid::after{color:var(--paper)}
+.ilink.solid:hover{background:var(--red-hi)}
+@media(max-width:760px){
+  .irow-head{grid-template-columns:40px 1fr 34px}
+  .irow .cat{display:none}
+  .irow-inner{padding-left:6px}
+}
+
+/* ============ KEYISM ============ */
+#keyism{padding:clamp(90px,12vw,160px) 0;background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+#keyism .k-label{color:var(--gold)}
+#keyism .k-label::before{background:var(--gold)}
+#keyism .h2 em{color:var(--gold)}
+.key-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,6vw,100px);align-items:center}
+.key-img{position:relative;max-width:460px}
+.key-img img{filter:contrast(1.03);border:1px solid var(--line)}
+.key-img .frame{position:absolute;inset:-16px;border:1px solid rgba(201,162,79,.3);pointer-events:none}
+.key-img .cap{position:absolute;right:-14px;top:24px;font-family:var(--f-mono);font-size:9px;letter-spacing:.35em;color:var(--gold);writing-mode:vertical-rl;text-transform:uppercase}
+.key-copy .serif{display:block;font-size:clamp(19px,1.9vw,26px);margin:20px 0 20px}
+.key-copy p{color:var(--paper-dim);max-width:52ch;font-size:15px}
+.key-meta{display:flex;gap:44px;margin:30px 0;font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.key-meta b{display:block;color:var(--paper);font-size:20px;letter-spacing:.05em;margin-bottom:6px;font-weight:500}
+.btn-gold{
+  font-family:var(--f-mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--ink);background:var(--gold);padding:14px 26px;display:inline-block;position:relative;overflow:hidden;transition:color .35s;
+}
+.btn-gold span{position:relative;z-index:1}
+.btn-gold::before{content:"";position:absolute;inset:0;background:var(--paper);transform:translateY(101%);transition:transform .45s var(--ease)}
+.btn-gold:hover::before{transform:translateY(0)}
+@media(max-width:960px){.key-grid{grid-template-columns:1fr}}
+
+/* ============ LIVE SLIDESHOW ============ */
+#live{height:100vh;position:relative;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);cursor:pointer}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s var(--ease)}
+.slide img{width:100%;height:100%;object-fit:cover;filter:grayscale(.25) contrast(1.05);transform:scale(1.06);transition:transform 6s linear}
+.slide.on{opacity:1}
+.slide.on img{transform:scale(1)}
+#live::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(10,10,9,.55),rgba(10,10,9,.15) 35%,rgba(10,10,9,.75));pointer-events:none}
+.live-word{position:absolute;left:var(--pad);bottom:8vh;z-index:2;font-family:var(--f-display);font-size:clamp(70px,13vw,220px);line-height:.9;text-transform:uppercase;color:var(--paper);text-shadow:0 4px 40px rgba(10,10,9,.75);pointer-events:none}
+.live-word em{font-style:normal;color:var(--red-hi)}
+.live-meta{position:absolute;right:var(--pad);bottom:8vh;z-index:2;text-align:right;pointer-events:none}
+.live-meta .cap{font-family:var(--f-mono);font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--paper)}
+.live-meta .cnt{font-family:var(--f-mono);font-size:10px;letter-spacing:.3em;color:var(--silver);margin-top:10px}
+.live-label{position:absolute;top:14vh;left:var(--pad);z-index:2;pointer-events:none}
+.live-bar{position:absolute;bottom:0;left:0;height:2px;background:var(--red);width:0;z-index:3}
+.live-hint{position:absolute;top:14vh;right:var(--pad);z-index:2;font-family:var(--f-mono);font-size:9px;letter-spacing:.35em;color:var(--silver);text-transform:uppercase;pointer-events:none}
+@media(max-width:760px){.live-word{font-size:clamp(54px,16vw,90px);bottom:12vh}.live-meta{right:var(--pad);bottom:5vh}}
+
+/* ============ TOUR ============ */
+.tour-peek{position:fixed;z-index:1500;width:250px;pointer-events:none;opacity:0;transform:scale(.92) rotate(-2deg);transition:opacity .35s var(--ease),transform .35s var(--ease);border:1px solid var(--line)}
+.tour-peek.on{opacity:1;transform:scale(1) rotate(-2deg)}
+@media(pointer:coarse){.tour-peek{display:none}}
+#tour{padding:clamp(90px,12vw,160px) 0}
+.tour-head{margin-bottom:clamp(36px,5vw,64px)}
+.tour-head .serif{font-size:clamp(17px,1.7vw,24px);margin-top:18px}
+.tour-row{
+  display:grid;grid-template-columns:110px 1fr 1.2fr 40px;gap:clamp(16px,3vw,50px);align-items:center;
+  padding:clamp(24px,2.8vw,40px) 8px;border-top:1px solid var(--line);transition:background .45s,padding-left .45s var(--ease);
+}
+.tour-row:last-of-type{border-bottom:1px solid var(--line)}
+.tour-row:hover{background:var(--ink-2);padding-left:26px}
+.tour-row .mo{font-family:var(--f-mono);font-size:12px;letter-spacing:.4em;color:var(--red);text-transform:uppercase}
+.tour-row .city{font-family:var(--f-display);font-size:clamp(30px,4.2vw,64px);line-height:1;text-transform:uppercase;color:var(--paper);transition:color .4s}
+.tour-row:hover .city{color:var(--red-hi)}
+.tour-row .d{color:var(--paper-dim);font-size:14px}
+.tour-row .a{font-family:var(--f-display);font-size:26px;color:var(--mute);transition:color .4s,transform .4s var(--ease)}
+.tour-row:hover .a{color:var(--red);transform:translateX(6px)}
+.tour-note{margin-top:26px;font-family:var(--f-mono);font-size:10px;letter-spacing:.2em;color:var(--mute);text-transform:uppercase}
+.tour-note a{color:var(--red)}
+@media(max-width:760px){.tour-row{grid-template-columns:64px 1fr 30px}.tour-row .d{grid-column:2/4;grid-row:2;font-size:13px}}
+
+/* ============ BOOKING ============ */
+#booking{padding:clamp(90px,12vw,160px) 0;background:var(--ink-2);border-top:1px solid var(--line)}
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5.5vw,96px);align-items:start}
+.book-copy .serif{display:block;font-size:clamp(18px,1.8vw,25px);margin:22px 0 18px}
+.book-copy>p{color:var(--paper-dim);max-width:52ch;font-size:15px}
+.rates{margin-top:34px;border-top:1px solid var(--line)}
+.rate{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:16px 6px;border-bottom:1px solid var(--line);transition:background .4s,padding-left .4s var(--ease)}
+.rate:hover{background:var(--ink-3);padding-left:16px}
+.rate .e{font-weight:400;font-size:14.5px;letter-spacing:.04em;color:var(--paper)}
+.rate .p{font-family:var(--f-display);font-size:clamp(18px,1.8vw,26px);color:var(--red)}
+.rate-note{font-size:12px;color:var(--mute);margin-top:14px;font-family:var(--f-mono);letter-spacing:.05em}
+.book-copy details{margin-top:22px;border:1px solid var(--line)}
+.book-copy summary{cursor:pointer;font-family:var(--f-mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--silver);padding:14px 18px;list-style:none;display:flex;justify-content:space-between;align-items:center;transition:color .3s}
+.book-copy summary::after{content:"+";color:var(--red);font-size:14px}
+.book-copy details[open] summary::after{content:"–"}
+.book-copy summary:hover{color:var(--paper)}
+.book-copy details ul{list-style:none;padding:0 18px 18px;display:flex;flex-direction:column;gap:10px}
+.book-copy details li{font-size:13px;color:var(--paper-dim);padding-left:20px;position:relative}
+.book-copy details li::before{content:"◆";position:absolute;left:0;top:1px;color:var(--red);font-size:8px}
+
+/* form */
+.bform{border:1px solid var(--line);padding:clamp(24px,3vw,40px);background:var(--ink)}
+.bform h4{font-family:var(--f-mono);font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--red);margin-bottom:24px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.frow.full{grid-template-columns:1fr}
+.fld{display:flex;flex-direction:column;gap:7px}
+.fld label{font-family:var(--f-mono);font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute)}
+.fld input,.fld select,.fld textarea{
+  background:var(--ink-2);border:1px solid var(--line);color:var(--paper);
+  font-family:var(--f-body);font-size:14px;font-weight:300;padding:13px 14px;outline:none;
+  transition:border-color .35s;border-radius:0;-webkit-appearance:none;appearance:none;
+}
+.fld select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23d90429'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--red)}
+.fld textarea{min-height:96px;resize:vertical}
+.btn-big{
+  font-family:var(--f-mono);font-size:12px;letter-spacing:.26em;text-transform:uppercase;
+  background:var(--red);color:var(--paper);padding:18px 34px;position:relative;overflow:hidden;transition:color .35s;display:inline-block;width:100%;text-align:center;
+}
+.btn-big span{position:relative;z-index:1}
+.btn-big::before{content:"";position:absolute;inset:0;background:var(--paper);transform:translateY(101%);transition:transform .45s var(--ease)}
+.btn-big:hover{color:var(--ink)}
+.btn-big:hover::before{transform:translateY(0)}
+.btn-big:disabled{opacity:.5;pointer-events:none}
+.fmsg{margin-top:14px;font-family:var(--f-mono);font-size:11px;letter-spacing:.15em;color:var(--silver);min-height:18px}
+.fmsg.ok{color:var(--red-hi)}
+@media(max-width:960px){.book-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.frow{grid-template-columns:1fr}}
+
+/* ============ ASCEND ============ */
+#ascend{min-height:110vh;display:flex;align-items:center;overflow:hidden;position:relative;padding:clamp(90px,12vw,160px) 0}
+.asc-img{position:absolute;right:-4vw;top:50%;transform:translateY(-50%);width:clamp(280px,36vw,560px);opacity:.8;will-change:transform}
+.asc-img img{filter:grayscale(1) contrast(1.06)}
+.asc-copy{position:relative;z-index:2}
+.asc-copy .h2{font-size:clamp(54px,8.5vw,150px)}
+.asc-copy .serif{display:block;font-size:clamp(19px,2.3vw,30px);margin:26px 0 36px;max-width:32ch}
+.asc-cta{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.asc-cta .btn-big{width:auto}
+.news{margin-top:56px;max-width:520px}
+.news .k-label{margin-bottom:16px}
+.news form{display:flex;border:1px solid var(--line);transition:border-color .4s}
+.news form:focus-within{border-color:var(--red)}
+.news input{flex:1;background:none;border:none;outline:none;color:var(--paper);font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;padding:16px 18px}
+.news input::placeholder{color:var(--mute)}
+.news button{font-family:var(--f-mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--red-hi);padding:0 22px;border-left:1px solid var(--line);transition:background .35s,color .35s}
+.news button:hover{background:var(--red);color:var(--paper)}
+@media(max-width:860px){.asc-img{position:relative;right:auto;top:auto;transform:none;width:80%;margin:0 auto 48px;opacity:1}}
+
+/* ============ FOOTER ============ */
+footer{border-top:1px solid var(--line);padding:clamp(60px,8vw,96px) 0 26px;background:var(--ink)}
+.foot-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:clamp(30px,4vw,64px);margin-bottom:clamp(48px,6vw,80px)}
+.foot-brand .brand{font-size:34px}
+.foot-brand p{font-size:13px;color:var(--mute);max-width:30ch;margin-top:14px}
+footer h5{font-family:var(--f-mono);font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--red);margin-bottom:20px}
+.foot-links{list-style:none;display:flex;flex-direction:column;gap:12px}
+.foot-links a{font-size:14px;color:var(--paper-dim);transition:color .3s,padding-left .3s var(--ease)}
+.foot-links a:hover{color:var(--red-hi);padding-left:8px}
+.foot-base{border-top:1px solid var(--line);padding-top:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:var(--f-mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+@media(max-width:860px){.foot-grid{grid-template-columns:1fr 1fr}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001s!important;transition-duration:.001s!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="loader" aria-hidden="true">
+  <img class="key" src="img/key-white.png" alt="">
+  <div class="num" id="loadnum">01</div>
+  <div class="bar"><i id="loadbar"></i></div>
+  <div class="lbl">Opening the world</div>
+</div>
+
+<div id="progress"></div>
+<div class="cur-dot" id="curdot"></div>
+<div class="cur-ring" id="curring"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="brand" href="#top"><img class="klogo" src="img/key-white.png" alt="19Keys key logo"><span>19<em>KEYS</em></span></a>
+  <div class="nav-links">
+    <a href="#world">The World</a>
+    <a href="#keyism">Keyism</a>
+    <a href="#tour">Tour</a>
+    <a href="#booking">Booking</a>
+    <a class="btn-passport" href="https://ziion.io" target="_blank" rel="noopener"><span>Claim Your Passport</span></a>
+  </div>
+</nav>
+
+<!-- SIDE HUD -->
+<div class="hud" aria-hidden="true">
+  <span class="v">EST. OAKLAND — OPERATING WORLDWIDE</span>
+  <span id="hud-sec">00 / SIGNAL</span>
+</div>
+
+<!-- ============ 00 · HERO ============ -->
+<section id="hero" aria-label="19Keys">
+  <a id="top"></a>
+  <div class="hero-pin">
+    <canvas id="dust" aria-hidden="true"></canvas>
+    <div class="hero-coord" aria-hidden="true">
+      37.8044° N — 122.2712° W<br>
+      HIGH LVL AGENCY<br>
+      TOP 1% PODCAST<br>
+      SIGNAL: LIVE
+    </div>
+    <div class="hero-type">
+      <h1 id="kinetic" aria-label="19KEYS"><span class="ch g">1</span><span class="ch g">9</span><span class="ch">K</span><span class="ch">E</span><span class="ch">Y</span><span class="ch">S</span></h1>
+      <div class="hero-sub">Global Futurist · Thought Leader · AI Educator</div>
+      <div class="hero-serif serif">The future is in session.</div>
+      <div class="hero-cta">
+        <a class="btn-passport" href="https://ziion.io" target="_blank" rel="noopener"><span>Claim Your Ziion Passport</span></a>
+        <a class="btn-ghost" href="#world">Enter the World</a>
+      </div>
+    </div>
+    <figure class="hero-plate" id="heroplate">
+      <img src="img/IMG_5165.jpg" alt="19Keys portrait — palm raised, wearing the star, moon and sun beret" width="960" height="1200">
+      <figcaption class="cap">19KEYS — FIG. 01 / THE STANDARD</figcaption>
+    </figure>
+    <div class="hero-scroll" aria-hidden="true"><i></i>Scroll</div>
+  </div>
+</section>
+
+<!-- THE PATH — funnel strip -->
+<div class="path" aria-label="The path">
+  <div class="wrap">
+    <a href="https://19keys.com/hlc"><span class="s">Step 01</span><span class="t">Watch the Conversations</span></a>
+    <a href="https://ziion.io" target="_blank" rel="noopener"><span class="s">Step 02</span><span class="t">Claim Your Passport</span></a>
+    <a href="#world" data-open="03"><span class="s">Step 03</span><span class="t">Build With the Team</span></a>
+    <a href="#booking"><span class="s">Step 04</span><span class="t">Bring 19Keys to Your City</span></a>
+  </div>
+</div>
+
+<!-- ============ 01 · MANIFESTO ============ -->
+<section id="manifesto" aria-label="Manifesto">
+  <div class="wrap man-grid">
+    <div class="man-words" id="manwords">
+      <div class="w">Philosophy</div>
+      <div class="w">Technology</div>
+      <div class="w gg">Ownership</div>
+      <div class="w">Culture</div>
+      <div class="w">Future</div>
+    </div>
+    <div class="man-copy">
+      <div class="k-label rv">01 — The Thesis</div>
+      <div style="height:26px"></div>
+      <span class="serif rv rv-d1">Higher thinking is not a luxury. It is <span class="hl">infrastructure</span>.</span>
+      <p class="rv rv-d2">19Keys translates the future into frameworks people can actually use. Not motivation — architecture. Every door on this page leads somewhere built for you to think higher, build smarter, and move with purpose.</p>
+      <figure class="man-portrait rv rv-d3">
+        <img src="img/IMG_5170.jpg" alt="19Keys — hands at temples, sepia editorial portrait" width="960" height="1200">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 · PROOF ============ -->
+<section id="stats" aria-label="Track record">
+  <img class="bgimg" src="img/live/the-people.jpg" alt="" aria-hidden="true">
+  <div class="stats-grid">
+    <div class="stat rv"><div class="n"><span class="count" data-n="300">0</span>M<b>+</b></div><div class="t">Views across High Level Conversations</div></div>
+    <div class="stat rv rv-d1"><div class="n"><span class="count" data-n="30">0</span>K<b>+</b></div><div class="t">Members inside Ziion</div></div>
+    <div class="stat rv rv-d2"><div class="n"><span class="count" data-n="17">0</span><b>+</b></div><div class="t">Cities activated worldwide</div></div>
+    <div class="stat rv rv-d3"><div class="n"><span class="count" data-n="7">0</span><b>+</b></div><div class="t">Years teaching the future</div></div>
+  </div>
+</section>
+
+<!-- ============ 03 · THE WORLD (index) ============ -->
+<section id="world" aria-label="The 19Keys world">
+  <div class="wrap">
+    <div class="world-head">
+      <div>
+        <div class="k-label rv">03 — The World</div>
+        <h2 class="h2 rv rv-d1" style="margin-top:18px">The <em>Index</em></h2>
+      </div>
+      <div class="serif rv rv-d2">Nine worlds. One frequency. Tap a line to open it.</div>
+    </div>
+
+    <div class="index rv">
+
+      <div class="irow">
+        <button class="irow-head" type="button" aria-expanded="false">
+          <span class="no">01</span>
+          <span class="nm">High Level Conversations <span class="tg">The future is in session.</span></span>
+          <span class="cat">Media</span>
+          <span class="pm">+</span>
+        </button>
+        <div class="irow-body"><div class="irow-inner">
+          <p>The award-winning, Top 1% podcast — long-form conversations with the builders, founders and thinkers architecting what comes next. 300M+ views.</p>
+          <div class="ilinks"><a class="ilink solid" href="https://19keys.com/hlc">Enter the conversation</a></div>
+        </div></div>
+      </div>
+
+      <div class="irow">
+        <button class="irow-head" type="button" aria-expanded="false">
+          <span class="no">02</span>
+          <span class="nm">Ziion <span class="tg">A new frontier for higher-level minds.</span></span>
+          <span class="cat">Platform</span>
+          <span class="pm">+</span>
+        </button>
+        <div class="irow-body"><div class="irow-inner">
+          <p>The digital nation — a private, verified space where 30,000+ creators and builders study with real mentors and build in public. Three ways in:</p>
+          <div class="ilinks">
+            <a class="ilink solid" href="https://ziion.io" target="_blank" rel="noopener">Join the platform</a>
+            <a class="ilink" href="https://ziion.io" target="_blank" rel="noopener">Build your own nation</a>
+            <a class="ilink" href="https://ziion.io/nations/high-lvl-nation" target="_blank" rel="noopener">High Lvl University</a>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="irow">
+        <button class="irow-head" type="button" aria-expanded="false">
+          <span class="no">03</span>
+          <span class="nm">19Keys AI <span class="tg">AI literacy is the new financial literacy.</span></span>
+          <span class="cat">Intelligence</span>
+          <span class="pm">+</span>
+        </button>
+        <div class="irow-body"><div class="irow-inner">
+          <p>The AI agency. 19Keys and his team of AI experts implement automation, AI agents and intelligent systems for businesses and creators.</p>
+          <div class="ilinks"><a class="ilink solid" href="https://19keys.com/ai">Get access</a></div>
+        </div></div>
+      </div>
+
+      <div class="irow">
+        <button class="irow-head" type="button" aria-expanded="false">
+          <span class="no">04</span>
+          <span class="nm">Supermind <span class="tg">Engineered, not mystical.</span></span>
+          <span class="cat">Fuel</span>
+          <span class="pm">+</span>
+        </button>
+        <div class="irow-body"><div class="irow-inner">
+          <p>Functional mushroom coffee for high performers — Lion's Mane, Cordyceps and L-Theanine. Focus without the jitters. 1,000+ five-star reviews.</p>
+          <div class="ilinks"><a class="ilink solid" href="https://asupermind.com" target="_blank" rel="noopener">Fuel the mind</a></div>
+        </div></div>
+      </div>
+
+      <div class="irow">
+        <button class="irow-head" type="button" aria-expanded="false">
+          <span class="no">05</span>
+          <span class="nm">Fashion <span class="tg">Universal royalty. High-level intelligence.</span></span>
+          <span class="cat">The Houses</span>
+          <span class="pm">+</span>
+        </button>
+        <div class="irow-body"><div class="irow-inner">
+          <p>Three houses, one universe. A19 — the new uniform. Crownz Society — wear your crown. High Lvl — elevate the everyday.</p>
+          <div class="ilinks"><a class="ilink solid" href="https://19keys.com/fashion">Choose your world</a></div>
+        </div></div>
+      </div>
+
+      <div class="irow">
+        <button class="irow-head" type="button" aria-expanded="false">
+          <span class="no">06</span>
+          <span class="nm">Africa Plus <span class="tg">Built on ownership. Sealed by trade.</span></span>
+          <span class="cat">The Bridge</span>
+          <span class="pm">+</span>
+        </button>
+        <div class="irow-body"><div class="irow-inner">
+          <p>The bridge between diaspora influence and African opportunity — real trade, investment and ownership. Uganda. Ghana. Nigeria. Ethiopia is next.</p>
+          <div class="ilinks"><a class="ilink solid" href="https://19keys.com/africa">Build with us</a><a class="ilink" href="https://19keys.com/ethiopia">Ethiopia — January</a></div>
+        </div></div>
+      </div>
+
+      <div class="irow">
+        <button class="irow-head" type="button" aria-expanded="false">
+          <span class="no">07</span>
+          <span class="nm">Project High Lvl <span class="tg">Rise above the gap.</span></span>
+          <span class="cat">Nonprofit</span>
+          <span class="pm">+</span>
+        </button>
+        <div class="irow-body"><div class="irow-inner">
+          <p>The 501(c)(3) putting AI education, financial literacy and wellness within reach of underserved communities. $50 puts one person in the room.</p>
+          <div class="ilinks"><a class="ilink solid" href="https://19keys.com/phl">Put someone in the room</a></div>
+        </div></div>
+      </div>
+
+      <div class="irow">
+        <button class="irow-head" type="button" aria-expanded="false">
+          <span class="no">08</span>
+          <span class="nm">Creator Growth <span class="tg">The creator is the new entrepreneur.</span></span>
+          <span class="cat">Partnership</span>
+          <span class="pm">+</span>
+        </button>
+        <div class="irow-body"><div class="irow-inner">
+          <p>The premium growth partnership for established creators and founders. You bring the vision — we build the strategy, content, rooms and systems.</p>
+          <div class="ilinks"><a class="ilink solid" href="https://19keys.com/creator">Apply for placement</a></div>
+        </div></div>
+      </div>
+
+      <div class="irow">
+        <button class="irow-head" type="button" aria-expanded="false">
+          <span class="no">09</span>
+          <span class="nm">Keyism <span class="tg">An up-close portrait of the world of 19Keys.</span></span>
+          <span class="cat">The Book</span>
+          <span class="pm">+</span>
+        </button>
+        <div class="irow-body"><div class="irow-inner">
+          <p>The journey, philosophy and frameworks — bound in a first edition from High Lvl Media Publishing. $44 digital · $111 hardcover.</p>
+          <div class="ilinks"><a class="ilink solid" href="https://19keys.com/keyism">Get the book</a><a class="ilink" href="#keyism">Preview below</a></div>
+        </div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 · KEYISM ============ -->
+<section id="keyism" aria-label="Keyism — the book">
+  <div class="wrap key-grid">
+    <figure class="key-img rv">
+      <img src="img/IMG_5168.jpg" alt="19Keys — hands clasped, sepia portrait from the Keyism edition" width="960" height="1200">
+      <span class="frame"></span>
+      <span class="cap">First Edition — High Lvl Media Publishing</span>
+    </figure>
+    <div class="key-copy">
+      <div class="k-label rv">04 — The Book</div>
+      <h2 class="h2 rv rv-d1" style="margin-top:18px">Key<em>ism</em></h2>
+      <span class="serif rv rv-d2">An up-close portrait of the journey, philosophy, and frameworks of 19Keys.</span>
+      <p class="rv rv-d2">Journey. Philosophy. Frameworks. From Oakland to seventeen cities worldwide — the book about 19Keys and his life, written for the ones building theirs.</p>
+      <div class="key-meta rv rv-d3">
+        <div><b>$44</b>Digital Edition</div>
+        <div><b>$111</b>Hardcover</div>
+        <div><b>Ed. 1</b>High Lvl Media</div>
+      </div>
+      <div class="rv rv-d4">
+        <a class="btn-gold" href="https://19keys.com/keyism"><span>Get Keyism</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 · LIVE ============ -->
+<section id="live" aria-label="19Keys live" title="Tap to advance">
+  <div class="slide on"><img src="img/live/sold-out.jpg" alt="Gramercy Theatre marquee — 19Keys tonight, sold out"></div>
+  <div class="slide"><img src="img/live/the-room.jpg" alt="A packed historic theater on its feet for 19Keys"></div>
+  <div class="slide"><img src="img/live/the-people.jpg" alt="Fists raised in the crowd at a 19Keys event"></div>
+  <div class="slide"><img src="img/live/the-stage.jpg" alt="19Keys on stage with a guest"></div>
+  <div class="slide"><img src="img/live/the-address.jpg" alt="19Keys delivering an address on stage"></div>
+  <div class="slide"><img src="img/live/the-award.jpg" alt="19Keys receiving an Award of Recognition"></div>
+  <div class="slide"><img src="img/live/backstage.jpg" alt="19Keys backstage before the show"></div>
+  <div class="live-label"><div class="k-label">05 — Live</div></div>
+  <div class="live-hint">Tap / click to advance</div>
+  <h2 class="live-word">Sold <em>Out</em><br>Season</h2>
+  <div class="live-meta">
+    <div class="cap" id="live-cap">New York — Gramercy Theatre</div>
+    <div class="cnt" id="live-cnt">01 / 07</div>
+  </div>
+  <div class="live-bar" id="live-bar"></div>
+</section>
+
+<!-- ============ 06 · TOUR ============ -->
+<section id="tour" aria-label="Tour dates">
+  <div class="wrap">
+    <div class="tour-head">
+      <div class="k-label rv">06 — The Tour</div>
+      <h2 class="h2 rv rv-d1" style="margin-top:18px">Where We<br>Are <em>Headed</em></h2>
+      <div class="serif rv rv-d2">Four cities. One frequency. Pull up.</div>
+    </div>
+
+    <a class="tour-row rv" href="https://19keys.com/hlc" data-peek="img/live/sold-out.jpg">
+      <span class="mo">Sep</span>
+      <span class="city">New York</span>
+      <span class="d">A media run across the top podcasts.</span>
+      <span class="a">→</span>
+    </a>
+    <a class="tour-row rv" href="#booking" data-peek="img/live/the-address.jpg">
+      <span class="mo">Oct</span>
+      <span class="city">London</span>
+      <span class="d">Black History Month in the UK. European masterminds and speaking engagements.</span>
+      <span class="a">→</span>
+    </a>
+    <a class="tour-row rv" href="#booking" data-peek="img/live/the-stage.jpg">
+      <span class="mo">Nov</span>
+      <span class="city">Los Angeles</span>
+      <span class="d">The Black Media Summit and address.</span>
+      <span class="a">→</span>
+    </a>
+    <a class="tour-row rv" href="https://19keys.com/ethiopia" data-peek="img/live/crown-red.jpg">
+      <span class="mo">Jan</span>
+      <span class="city">Ethiopia</span>
+      <span class="d">With Chaka Bars. Ethiopia and greater Africa, like never before.</span>
+      <span class="a">→</span>
+    </a>
+
+    <div class="tour-note rv">Itinerary planned and subject to change · Inner-circle trips offered through <a href="https://19keys.com/africa">Africa Plus</a></div>
+  </div>
+  <img class="tour-peek" id="tourpeek" src="img/live/sold-out.jpg" alt="" aria-hidden="true">
+</section>
+
+<!-- ============ 06 · BOOKING ============ -->
+<section id="booking" aria-label="Booking">
+  <div class="wrap book-grid">
+    <div class="book-copy">
+      <div class="k-label rv">07 — Booking</div>
+      <h2 class="h2 rv rv-d1" style="margin-top:18px">Bring 19Keys<br>To Your <em>Stage</em></h2>
+      <span class="serif rv rv-d2">Engagements with 19Keys are high-level experiential activations — not speaking gigs.</span>
+      <p class="rv rv-d2">Sold-out venues of 25,000+. Historic rooms like the Apollo. Every engagement is held to The 19Keys Standard.</p>
+
+      <div class="rates rv rv-d3">
+        <div class="rate"><span class="e">Keynote Speaking</span><span class="p">$25,000+</span></div>
+        <div class="rate"><span class="e">Retreat / Partnership Experience</span><span class="p">$25,000+</span></div>
+        <div class="rate"><span class="e">Panel / Fireside Chat</span><span class="p">$19,000+</span></div>
+        <div class="rate"><span class="e">In-Person Podcast / Private Video</span><span class="p">$12,000+</span></div>
+        <div class="rate"><span class="e">Virtual Podcast / Appearance</span><span class="p">$5,000+</span></div>
+      </div>
+      <p class="rate-note rv">Rates are starting points — adjusted on logistics, value-adds, partner infrastructure and deal structure.</p>
+
+      <details class="rv">
+        <summary>What organizers prepare</summary>
+        <ul>
+          <li>Event details — date, venue, audience size, exact format</li>
+          <li>Clear financial offer or proposed revenue-share model</li>
+          <li>Travel confirmed for 19Keys and management</li>
+          <li>Media plan — content team, recap video, raw footage access</li>
+          <li>Security plan for management review</li>
+          <li>Community tickets for the 19Keys / Ziion network</li>
+        </ul>
+      </details>
+
+      <div class="rv" style="margin-top:22px;display:flex;gap:14px;flex-wrap:wrap">
+        <a class="btn-ghost" href="epk.html">Open the Press Kit — EPK</a>
+      </div>
+    </div>
+
+    <div class="bform rv rv-d2">
+      <h4>Submit a Booking Inquiry</h4>
+      <form id="bookform" novalidate>
+        <div class="frow">
+          <div class="fld"><label for="f-name">Name *</label><input id="f-name" name="name" type="text" required autocomplete="name"></div>
+          <div class="fld"><label for="f-email">Email *</label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
+        </div>
+        <div class="frow">
+          <div class="fld"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+          <div class="fld"><label for="f-brand">Brand / Business</label><input id="f-brand" name="brand" type="text" autocomplete="organization"></div>
+        </div>
+        <div class="frow">
+          <div class="fld">
+            <label for="f-type">Engagement Type *</label>
+            <select id="f-type" name="type" required>
+              <option value="" disabled selected>Select one</option>
+              <option>Keynote Speaking</option>
+              <option>Retreat / Partnership Experience</option>
+              <option>Panel / Fireside Chat</option>
+              <option>In-Person Podcast / Private Video</option>
+              <option>Virtual Podcast / Appearance</option>
+              <option>Event / Other</option>
+            </select>
+          </div>
+          <div class="fld"><label for="f-date">Target Date</label><input id="f-date" name="date" type="date"></div>
+        </div>
+        <div class="frow full">
+          <div class="fld"><label for="f-fee">Proposed Fee / Budget</label><input id="f-fee" name="fee" type="text" placeholder="e.g. $25,000 or revenue-share proposal"></div>
+        </div>
+        <div class="frow full">
+          <div class="fld"><label for="f-notes">Notes</label><textarea id="f-notes" name="notes" placeholder="Venue, audience size, format, media plan, anything else."></textarea></div>
+        </div>
+        <button class="btn-big" id="bsubmit" type="submit"><span>Send Inquiry</span></button>
+        <div class="fmsg" id="fmsg" role="status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 · ASCEND ============ -->
+<section id="ascend" aria-label="Join">
+  <figure class="asc-img" id="ascimg">
+    <img src="img/IMG_5206.jpg" alt="19Keys reaching upward" width="960" height="1200">
+  </figure>
+  <div class="wrap asc-copy">
+    <div class="k-label rv">08 — The Next Step</div>
+    <h2 class="h2 rv rv-d1" style="margin-top:18px">Reach The<br><em>Highest</em> Level</h2>
+    <span class="serif rv rv-d2">The institutions built for the last century are cracking. Something else is taking their place. <span class="hl">Be inside it.</span></span>
+    <div class="asc-cta rv rv-d3">
+      <a class="btn-big" href="https://ziion.io" target="_blank" rel="noopener"><span>Claim Your Ziion Passport</span></a>
+      <a class="btn-ghost" href="https://ziion.io/nations/high-lvl-nation" target="_blank" rel="noopener">Enter High Lvl University</a>
+    </div>
+    <div class="news rv rv-d4">
+      <div class="k-label">The 19Keys Substack</div>
+      <form id="subform" aria-label="Substack signup">
+        <input type="email" id="sub-email" placeholder="YOUR@EMAIL.COM" aria-label="Email address" required>
+        <button type="submit">Plug In</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand">19<em>KEYS</em></div>
+        <p>Global futurist, thought leader and AI educator. Think higher. Build smarter. Move with purpose.</p>
+      </div>
+      <div>
+        <h5>Worlds</h5>
+        <ul class="foot-links">
+          <li><a href="https://19keys.com/hlc">High Level Conversations</a></li>
+          <li><a href="https://ziion.io" target="_blank" rel="noopener">Ziion</a></li>
+          <li><a href="https://19keys.com/ai">19Keys AI</a></li>
+          <li><a href="https://asupermind.com" target="_blank" rel="noopener">Supermind</a></li>
+          <li><a href="https://19keys.com/fashion">Fashion</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Movement</h5>
+        <ul class="foot-links">
+          <li><a href="https://19keys.com/africa">Africa Plus</a></li>
+          <li><a href="https://19keys.com/phl">Project High Lvl</a></li>
+          <li><a href="https://19keys.com/creator">Creator Growth</a></li>
+          <li><a href="https://19keys.com/keyism">Keyism — The Book</a></li>
+          <li><a href="https://19keys.com/ethiopia">Ethiopia — January</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Direct</h5>
+        <ul class="foot-links">
+          <li><a href="#tour">The Tour</a></li>
+          <li><a href="#booking">Book 19Keys</a></li>
+          <li><a href="epk.html">Press Kit — EPK</a></li>
+          <li><a href="https://19keys.substack.com/" target="_blank" rel="noopener">The Substack</a></li>
+          <li><a href="mailto:19Keys@19Keys.com">19Keys@19Keys.com</a></li>
+          <li><a href="https://ziion.io/nations/high-lvl-nation" target="_blank" rel="noopener">High Lvl University</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 19Keys · High Lvl Agency</span>
+      <span>Think Higher · Build Smarter · Move With Purpose</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Booking endpoint — Google Apps Script web app */
+var BOOKING_ENDPOINT='https://script.google.com/macros/s/AKfycbyrmL1t1bHH3qc2sP3r-bkjdF9HB6Oa0Mt5uALv_wreofw4AfVd9mOsLN7tz1A91VKKkg/exec';
+
+/* ---------- PRELOADER ---------- */
+var loader=document.getElementById('loader'),ln=document.getElementById('loadnum'),lb=document.getElementById('loadbar');
+var li=0,steps=[1,3,5,7,9,11,13,15,17,19];
+var lt=setInterval(function(){
+  ln.textContent=(steps[li]<10?'0':'')+steps[li];
+  lb.style.transform='scaleX('+((li+1)/steps.length)+')';
+  li++;
+  if(li>=steps.length){clearInterval(lt);setTimeout(function(){loader.classList.add('done');},350);}
+},reduced?1:95);
+
+/* ---------- CURSOR ---------- */
+var dot=document.getElementById('curdot'),ring=document.getElementById('curring');
+var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;dot.style.transform='translate('+mx+'px,'+my+'px)';});
+(function ringLoop(){rx+=(mx-rx)*.14;ry+=(my-ry)*.14;ring.style.transform='translate('+rx+'px,'+ry+'px)';requestAnimationFrame(ringLoop);})();
+document.querySelectorAll('a,button,.rate,.tour-row,input,select,textarea').forEach(function(el){
+  el.addEventListener('mouseenter',function(){document.body.classList.add('cur-hover');});
+  el.addEventListener('mouseleave',function(){document.body.classList.remove('cur-hover');});
+});
+
+/* ---------- NAV ---------- */
+var nav=document.getElementById('nav'),prog=document.getElementById('progress'),lastY=0;
+addEventListener('scroll',function(){
+  var y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+  prog.style.width=(y/h*100)+'%';
+  nav.classList.toggle('scrolled',y>60);
+  nav.classList.toggle('hid',y>400&&y>lastY);
+  lastY=y;
+},{passive:true});
+
+/* ---------- DUST PARTICLES (silver) ---------- */
+var cv=document.getElementById('dust'),cx=cv.getContext('2d'),P=[];
+function sizeCv(){cv.width=cv.offsetWidth*devicePixelRatio;cv.height=cv.offsetHeight*devicePixelRatio;}
+sizeCv();addEventListener('resize',sizeCv);
+for(var i=0;i<100;i++){P.push({x:Math.random(),y:Math.random(),r:Math.random()*1.5+.4,s:Math.random()*.00022+.00006,o:Math.random()*.4+.08,ph:Math.random()*6.28});}
+(function dustLoop(t){
+  cx.clearRect(0,0,cv.width,cv.height);
+  for(var i=0;i<P.length;i++){
+    var p=P[i];
+    p.y-=p.s; if(p.y<-.02){p.y=1.02;p.x=Math.random();}
+    var wob=Math.sin(t*.0004+p.ph)*.012;
+    cx.beginPath();
+    cx.arc((p.x+wob)*cv.width,p.y*cv.height,p.r*devicePixelRatio,0,6.28);
+    cx.fillStyle='rgba(190,193,200,'+(p.o*(0.55+0.45*Math.sin(t*.001+p.ph)))+')';
+    cx.fill();
+  }
+  if(!reduced)requestAnimationFrame(dustLoop);
+})(0);
+
+/* ---------- HERO KINETIC ---------- */
+var hero=document.getElementById('hero'),chars=document.querySelectorAll('#kinetic .ch'),plate=document.getElementById('heroplate');
+function heroTick(){
+  var r=hero.getBoundingClientRect();
+  var p=Math.min(Math.max(-r.top/(r.height-innerHeight),0),1);
+  chars.forEach(function(c,i){
+    var dir=(i-2.5)/2.5;
+    c.style.transform='translateX('+(dir*p*22)+'vw) translateY('+(Math.abs(dir)*p*-6)+'vh)';
+    c.style.opacity=1-p*1.15;
+  });
+  plate.style.transform='translateY('+(p*-10)+'vh) rotate('+(p*-2.5)+'deg)';
+  plate.style.opacity=Math.max(0,.92-p*1.25);
+}
+/* ---------- MANIFESTO WORDS ---------- */
+var words=document.querySelectorAll('#manwords .w');
+function wordsTick(){
+  words.forEach(function(w){
+    var r=w.getBoundingClientRect();
+    w.classList.toggle('on',r.top<innerHeight*.75&&r.bottom>innerHeight*.15);
+  });
+}
+/* ---------- ASCEND PARALLAX ---------- */
+var asc=document.getElementById('ascend'),ascimg=document.getElementById('ascimg');
+function ascTick(){
+  var r=asc.getBoundingClientRect();
+  if(r.top<innerHeight&&r.bottom>0){
+    var p=(innerHeight-r.top)/(innerHeight+r.height);
+    if(matchMedia('(min-width:861px)').matches){ascimg.style.transform='translateY('+((-50)+(p-.5)*-14)+'%)';}
+  }
+}
+function master(){if(!reduced){heroTick();ascTick();}wordsTick();requestAnimationFrame(master);}
+requestAnimationFrame(master);
+
+/* ---------- REVEALS ---------- */
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});
+},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+
+/* ---------- COUNTERS ---------- */
+var cio=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(!e.isIntersecting)return;
+    var el=e.target,target=+el.dataset.n,t0=null;
+    function step(ts){
+      if(!t0)t0=ts;
+      var p=Math.min((ts-t0)/1600,1);p=1-Math.pow(1-p,4);
+      el.textContent=Math.round(target*p);
+      if(p<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+    cio.unobserve(el);
+  });
+},{threshold:.6});
+document.querySelectorAll('.count').forEach(function(el){cio.observe(el);});
+
+/* ---------- HUD SECTION ---------- */
+var hudSec=document.getElementById('hud-sec');
+var secs=[['hero','00 / SIGNAL'],['manifesto','01 / THESIS'],['stats','02 / PROOF'],['world','03 / THE WORLD'],['keyism','04 / THE BOOK'],['live','05 / LIVE'],['tour','06 / THE TOUR'],['booking','07 / BOOKING'],['ascend','08 / ASCEND']];
+addEventListener('scroll',function(){
+  for(var i=secs.length-1;i>=0;i--){
+    var el=document.getElementById(secs[i][0]);
+    if(el&&el.getBoundingClientRect().top<innerHeight*.5){hudSec.textContent=secs[i][1];break;}
+  }
+},{passive:true});
+
+/* ---------- INDEX ACCORDIONS ---------- */
+document.querySelectorAll('.irow').forEach(function(row){
+  var head=row.querySelector('.irow-head'),body=row.querySelector('.irow-body');
+  head.addEventListener('click',function(){
+    var open=row.classList.contains('open');
+    document.querySelectorAll('.irow.open').forEach(function(o){
+      o.classList.remove('open');
+      o.querySelector('.irow-body').style.maxHeight='0px';
+      o.querySelector('.irow-head').setAttribute('aria-expanded','false');
+    });
+    if(!open){
+      row.classList.add('open');
+      body.style.maxHeight=body.scrollHeight+'px';
+      head.setAttribute('aria-expanded','true');
+    }
+  });
+});
+
+/* ---------- LIVE SLIDESHOW ---------- */
+var live=document.getElementById('live');
+if(live){
+  var slides=live.querySelectorAll('.slide'),cap=document.getElementById('live-cap'),cnt=document.getElementById('live-cnt'),lbar=document.getElementById('live-bar');
+  var caps=['New York — Gramercy Theatre','Detroit — The Room','The People','On Stage','The Address','Award of Recognition — Detroit City Council','Backstage'];
+  var cur=0,DUR=4200,t0=performance.now(),paused=false;
+  function go(n){
+    slides[cur].classList.remove('on');
+    cur=(n+slides.length)%slides.length;
+    slides[cur].classList.add('on');
+    cap.textContent=caps[cur];
+    cnt.textContent=('0'+(cur+1)).slice(-2)+' / 0'+slides.length;
+    t0=performance.now();
+  }
+  live.addEventListener('click',function(){go(cur+1);});
+  (function liveLoop(ts){
+    if(!paused&&!reduced){
+      var p=(ts-t0)/DUR;
+      lbar.style.width=Math.min(p*100,100)+'%';
+      if(p>=1)go(cur+1);
+    }
+    requestAnimationFrame(liveLoop);
+  })(performance.now());
+  document.addEventListener('visibilitychange',function(){paused=document.hidden;t0=performance.now();});
+}
+
+/* ---------- TOUR PEEK ---------- */
+var peek=document.getElementById('tourpeek');
+if(peek&&matchMedia('(pointer:fine)').matches){
+  document.querySelectorAll('.tour-row[data-peek]').forEach(function(row){
+    row.addEventListener('mouseenter',function(){peek.src=row.dataset.peek;peek.classList.add('on');});
+    row.addEventListener('mouseleave',function(){peek.classList.remove('on');});
+    row.addEventListener('mousemove',function(e){
+      peek.style.left=(e.clientX+30)+'px';
+      peek.style.top=(e.clientY-90)+'px';
+    });
+  });
+}
+
+/* ---------- SUBSTACK ---------- */
+document.getElementById('subform').addEventListener('submit',function(ev){
+  ev.preventDefault();
+  var v=document.getElementById('sub-email').value.trim();
+  var u='https://19keys.substack.com/subscribe'+(v?'?email='+encodeURIComponent(v):'');
+  window.open(u,'_blank','noopener');
+});
+
+/* ---------- BOOKING FORM ---------- */
+var bf=document.getElementById('bookform'),fmsg=document.getElementById('fmsg'),bsub=document.getElementById('bsubmit');
+bf.addEventListener('submit',function(ev){
+  ev.preventDefault();
+  var name=document.getElementById('f-name').value.trim();
+  var email=document.getElementById('f-email').value.trim();
+  var type=document.getElementById('f-type').value;
+  if(!name||!email||!type||email.indexOf('@')<0){
+    fmsg.className='fmsg';fmsg.textContent='Name, email, and engagement type are required.';return;
+  }
+  bsub.disabled=true;fmsg.className='fmsg';fmsg.textContent='Transmitting…';
+  var data=new URLSearchParams({
+    name:name,
+    email:email,
+    phone:document.getElementById('f-phone').value.trim(),
+    brand:document.getElementById('f-brand').value.trim(),
+    type:type,
+    date:document.getElementById('f-date').value,
+    fee:document.getElementById('f-fee').value.trim(),
+    notes:document.getElementById('f-notes').value.trim()
+  });
+  fetch(BOOKING_ENDPOINT,{method:'POST',mode:'no-cors',body:data})
+  .then(function(){
+    fmsg.className='fmsg ok';
+    fmsg.textContent='Received. The High Lvl Agency team will be in touch.';
+    bf.reset();bsub.disabled=false;
+  })
+  .catch(function(){
+    fmsg.className='fmsg';
+    fmsg.textContent='Transmission failed — email 19Keys@19Keys.com directly.';
+    bsub.disabled=false;
+  });
+});
+})();
+</script>
+</body>
+</html>

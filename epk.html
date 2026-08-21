@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>19KEYS — Electronic Press Kit</title>
+<meta name="description" content="Official press kit for 19Keys — bio, speaker introduction, engagement standards, and downloadable press photography. Managed by High Lvl Agency.">
+<meta property="og:title" content="19KEYS — Electronic Press Kit">
+<meta property="og:description" content="Official bio, speaker introduction, and downloadable press photos for 19Keys.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a0a09;--ink-2:#101010;--ink-3:#161615;
+  --paper:#f2f0ea;--paper-dim:#c7c4bc;--silver:#9ba0a8;--mute:#5c5e63;
+  --red:#d90429;--red-hi:#ff2d47;
+  --line:rgba(242,240,234,.10);
+  --f-display:'Anton',Impact,sans-serif;--f-serif:'Cormorant Garamond',Georgia,serif;
+  --f-body:'Space Grotesk',Helvetica,Arial,sans-serif;--f-mono:'IBM Plex Mono',ui-monospace,monospace;
+  --ease:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,5vw,72px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{background:var(--ink)}
+body{font-family:var(--f-body);color:var(--paper);font-weight:300;line-height:1.7;letter-spacing:.01em;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--red);color:var(--paper)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
+body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:2000;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 7s steps(10) infinite}
+@keyframes grain{0%,100%{transform:translate(0,0)}20%{transform:translate(-3%,4%)}40%{transform:translate(3%,-2%)}60%{transform:translate(-2%,-4%)}80%{transform:translate(4%,2%)}}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:22px var(--pad);background:linear-gradient(rgba(10,10,9,.96) 40%,rgba(10,10,9,.55) 75%,rgba(10,10,9,0));backdrop-filter:blur(8px)}
+.brand{font-family:var(--f-display);font-size:22px;letter-spacing:.14em;color:var(--paper);display:flex;align-items:center;gap:12px}
+.brand em{color:var(--red);font-style:normal}
+.brand .klogo{height:26px;width:auto;display:block}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{font-family:var(--f-mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--silver);transition:color .3s}
+.nav-links a:hover{color:var(--paper)}
+.btn-red{font-family:var(--f-mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--paper);background:var(--red);padding:12px 22px;display:inline-block;position:relative;overflow:hidden;transition:color .35s}
+.btn-red span{position:relative;z-index:1}
+.btn-red::before{content:"";position:absolute;inset:0;background:var(--paper);transform:translateY(101%);transition:transform .45s var(--ease)}
+.btn-red:hover{color:var(--ink)}
+.btn-red:hover::before{transform:translateY(0)}
+.btn-ghost{font-family:var(--f-mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--paper);border:1px solid var(--line);padding:13px 22px;transition:border-color .4s,color .4s;display:inline-block}
+.btn-ghost:hover{border-color:var(--red);color:var(--red-hi)}
+@media(max-width:760px){.nav-links a.hidem{display:none}}
+
+.wrap{padding-left:var(--pad);padding-right:var(--pad);max-width:1460px;margin:0 auto}
+.k-label{font-family:var(--f-mono);font-size:10px;letter-spacing:.5em;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:14px}
+.k-label::before{content:"";width:44px;height:1px;background:var(--red)}
+.serif{font-family:var(--f-serif);font-style:italic;font-weight:400;color:var(--paper-dim)}
+.h1{font-family:var(--f-display);font-weight:400;font-size:clamp(58px,10vw,170px);line-height:.93;text-transform:uppercase;color:var(--paper)}
+.h1 em,.h2 em{font-style:normal;color:var(--red)}
+.h2{font-family:var(--f-display);font-weight:400;font-size:clamp(38px,5.5vw,90px);line-height:.95;text-transform:uppercase;color:var(--paper)}
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.on{opacity:1;transform:none}
+.rv-d1{transition-delay:.1s}.rv-d2{transition-delay:.22s}.rv-d3{transition-delay:.34s}
+
+/* header */
+header{padding:22vh 0 10vh;position:relative;overflow:hidden}
+header .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.16;filter:grayscale(1) contrast(1.1)}
+header .wrap{position:relative;z-index:1}
+header .sub{font-family:var(--f-mono);font-size:clamp(9px,1.2vw,12px);letter-spacing:.55em;text-transform:uppercase;color:var(--silver);margin-top:22px}
+
+/* bio */
+#bio{padding:clamp(80px,10vw,140px) 0;border-top:1px solid var(--line)}
+.bio-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(30px,6vw,100px);align-items:start}
+.bio-img{position:sticky;top:110px}
+.bio-img img{border:1px solid var(--line);filter:grayscale(1) contrast(1.04)}
+.bio-img .cap{font-family:var(--f-mono);font-size:9px;letter-spacing:.3em;color:var(--mute);margin-top:10px;text-transform:uppercase}
+.bio-copy .h2{margin:18px 0 26px}
+.bio-copy p{color:var(--paper-dim);font-size:clamp(15px,1.25vw,17px);max-width:62ch;margin-bottom:20px}
+.bio-copy p b{color:var(--paper);font-weight:500}
+.intro-box{border:1px solid var(--line);background:var(--ink-2);padding:clamp(24px,3vw,40px);margin-top:34px}
+.intro-box h4{font-family:var(--f-mono);font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--red);margin-bottom:16px}
+.intro-box p{font-family:var(--f-serif);font-style:italic;font-size:clamp(16px,1.5vw,20px);color:var(--paper);margin:0}
+.intro-box .note{font-family:var(--f-mono);font-size:10px;letter-spacing:.15em;color:var(--mute);margin-top:16px;font-style:normal}
+@media(max-width:960px){.bio-grid{grid-template-columns:1fr}.bio-img{position:static;max-width:420px}}
+
+/* facts */
+#facts{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink-2)}
+.facts-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{padding:clamp(28px,3.4vw,52px) 24px;border-left:1px solid var(--line)}
+.fact:first-child{border-left:none}
+.fact .n{font-family:var(--f-display);font-size:clamp(34px,4vw,64px);color:var(--paper);line-height:1}
+.fact .n b{color:var(--red);font-weight:400}
+.fact .t{font-family:var(--f-mono);font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mute);margin-top:10px}
+@media(max-width:860px){.facts-grid{grid-template-columns:repeat(2,1fr)}.fact:nth-child(3){border-left:none}}
+
+/* engagements */
+#engage{padding:clamp(80px,10vw,140px) 0}
+.eng-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:start}
+.rate{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:16px 6px;border-bottom:1px solid var(--line);transition:background .4s,padding-left .4s var(--ease)}
+.rate:first-of-type{border-top:1px solid var(--line)}
+.rate:hover{background:var(--ink-3);padding-left:16px}
+.rate .e{font-weight:400;font-size:14.5px;letter-spacing:.04em;color:var(--paper)}
+.rate .p{font-family:var(--f-display);font-size:clamp(18px,1.8vw,26px);color:var(--red)}
+.eng-note{font-size:12px;color:var(--mute);margin-top:14px;font-family:var(--f-mono);letter-spacing:.05em}
+.std p{color:var(--paper-dim);font-size:15px;max-width:52ch;margin-top:20px}
+.std .serif{display:block;font-size:clamp(18px,1.8vw,24px);margin-top:18px}
+@media(max-width:960px){.eng-grid{grid-template-columns:1fr}}
+
+/* gallery */
+#photos{padding:clamp(80px,10vw,140px) 0;background:var(--ink-2);border-top:1px solid var(--line)}
+.ph-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(30px,4vw,50px)}
+.ph-actions{display:flex;gap:12px;flex-wrap:wrap}
+.viewer{position:relative;border:1px solid var(--line);background:var(--ink);overflow:hidden}
+.viewer .stage{position:relative;height:min(72vh,760px)}
+.viewer .stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .7s var(--ease)}
+.viewer .stage img.on{opacity:1}
+.vbar{display:flex;align-items:center;justify-content:space-between;gap:14px;border-top:1px solid var(--line);padding:14px 18px;flex-wrap:wrap}
+.vbar .cap{font-family:var(--f-mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--silver)}
+.vbar .ctl{display:flex;gap:10px;align-items:center}
+.vbtn{width:38px;height:38px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-size:16px;color:var(--paper);transition:border-color .3s,color .3s}
+.vbtn:hover{border-color:var(--red);color:var(--red-hi)}
+.vdl{font-family:var(--f-mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;border:1px solid var(--line);padding:11px 16px;color:var(--paper);transition:border-color .3s,color .3s,background .3s;display:inline-flex;gap:8px;align-items:center}
+.vdl::after{content:"↓";color:var(--red)}
+.vdl:hover{border-color:var(--red);background:rgba(217,4,41,.06)}
+.thumbs{display:grid;grid-template-columns:repeat(8,1fr);gap:8px;margin-top:14px}
+.thumbs button{border:1px solid var(--line);padding:0;opacity:.55;transition:opacity .3s,border-color .3s;aspect-ratio:1;overflow:hidden}
+.thumbs button img{width:100%;height:100%;object-fit:cover;filter:grayscale(.4)}
+.thumbs button.on,.thumbs button:hover{opacity:1;border-color:var(--red)}
+@media(max-width:860px){.thumbs{grid-template-columns:repeat(4,1fr)}}
+
+.grid-all{display:none;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.grid-all.open{display:grid}
+.gcard{border:1px solid var(--line);background:var(--ink);position:relative;overflow:hidden}
+.gcard img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(.25);transition:transform .6s var(--ease),filter .6s}
+.gcard:hover img{transform:scale(1.04);filter:grayscale(0)}
+.gcard .gbar{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-top:1px solid var(--line)}
+.gcard .gname{font-family:var(--f-mono);font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--silver)}
+.gcard .gdl{font-family:var(--f-mono);font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--red-hi)}
+.gcard .gdl:hover{color:var(--paper)}
+@media(max-width:860px){.grid-all{grid-template-columns:repeat(2,1fr)}}
+
+/* contact */
+#contact{padding:clamp(80px,10vw,140px) 0}
+.con-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(30px,6vw,90px);align-items:center}
+.con-list{list-style:none;margin-top:30px;border-top:1px solid var(--line)}
+.con-list li{display:flex;justify-content:space-between;gap:18px;padding:16px 6px;border-bottom:1px solid var(--line);font-size:14.5px;flex-wrap:wrap}
+.con-list .k{font-family:var(--f-mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute);align-self:center}
+.con-list a{color:var(--paper)}
+.con-list a:hover{color:var(--red-hi)}
+.con-img img{border:1px solid var(--line)}
+@media(max-width:860px){.con-grid{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line);padding:30px 0;font-family:var(--f-mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001s!important;transition-duration:.001s!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="index.html"><img class="klogo" src="img/key-white.png" alt="19Keys key logo"><span>19<em>KEYS</em></span></a>
+  <div class="nav-links">
+    <a class="hidem" href="index.html">Home</a>
+    <a class="hidem" href="#bio">Bio</a>
+    <a class="hidem" href="#photos">Photos</a>
+    <a class="btn-red" href="index.html#booking"><span>Book 19Keys</span></a>
+  </div>
+</nav>
+
+<header>
+  <img class="bg" src="img/live/the-room.jpg" alt="" aria-hidden="true">
+  <div class="wrap">
+    <div class="k-label rv on">Official Press Kit</div>
+    <h1 class="h1" style="margin-top:20px">19<em>KEYS</em><br>EPK</h1>
+    <div class="sub">Bio · Speaker Introduction · Engagement Standards · Press Photography</div>
+  </div>
+</header>
+
+<!-- BIO -->
+<section id="bio">
+  <div class="wrap bio-grid">
+    <figure class="bio-img rv">
+      <img src="img/live/leather.jpg" alt="19Keys — official press portrait in black leather" width="640" height="960">
+      <figcaption class="cap">19KEYS — OFFICIAL PORTRAIT</figcaption>
+    </figure>
+    <div class="bio-copy">
+      <div class="k-label rv">01 — The Bio</div>
+      <h2 class="h2 rv rv-d1">Global Futurist.<br>Cultural <em>Thought Leader</em>.</h2>
+      <p class="rv rv-d2"><b>19Keys</b> is a global futurist, cultural thought leader, entrepreneur, AI educator, and host of the award-winning, Top 1% podcast <b>High Level Conversations</b>. His work sits at the intersection of culture, technology, ownership, wellness, spiritual intelligence, and self-mastery — translating complex ideas about the future into clear frameworks that help people think higher, build smarter, and move with purpose.</p>
+      <p class="rv rv-d2">Through High Level Conversations, 19Keys has helped generate <b>over 300 million views</b> across long-form conversations, clips, and community-driven media. Through <b>Ziion.io</b>, a future-focused learning and community platform with <b>over 30,000 members</b>, he helps audiences access high-level education, masterclasses, AI tools, and collaborative spaces built for implementation.</p>
+      <p class="rv rv-d2">19Keys has led multiple AI hackathons and has been teaching future technology, digital ownership, and AI-centered frameworks for <b>more than seven years</b>. He has spoken and activated audiences in <b>over 17 cities globally</b> — from Toronto to London to Nigeria and beyond — bringing future-facing insight to leaders, entrepreneurs, creators, and communities seeking practical strategy, higher thinking, and real-world transformation.</p>
+      <div class="intro-box rv rv-d3">
+        <h4>Short Speaker Introduction — read as written</h4>
+        <p>"Please welcome 19Keys — a global futurist, AI educator, entrepreneur, and host of High Level Conversations, a Top 1% podcast and media platform with over 300 million views. Through Ziion.io, a future-focused learning and community platform with over 30,000 members, he has led multiple AI hackathons and taught technology, ownership, and high-level frameworks for more than seven years. Having spoken across more than 17 cities globally — from Toronto to London to Nigeria and more — 19Keys helps audiences understand the future, build with purpose, and take action at a higher level."</p>
+        <div class="note">Approved use: speaker packets, event programs, partner decks, press outreach, sponsor briefs, production notes.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACTS -->
+<section id="facts" aria-label="Fast facts">
+  <div class="facts-grid">
+    <div class="fact rv"><div class="n">300M<b>+</b></div><div class="t">Views — High Level Conversations</div></div>
+    <div class="fact rv rv-d1"><div class="n">30K<b>+</b></div><div class="t">Ziion members</div></div>
+    <div class="fact rv rv-d2"><div class="n">17<b>+</b></div><div class="t">Cities worldwide</div></div>
+    <div class="fact rv rv-d3"><div class="n">25K<b>+</b></div><div class="t">Sold-out venue capacity</div></div>
+  </div>
+</section>
+
+<!-- ENGAGEMENTS -->
+<section id="engage">
+  <div class="wrap eng-grid">
+    <div class="std">
+      <div class="k-label rv">02 — The 19Keys Standard</div>
+      <h2 class="h2 rv rv-d1" style="margin-top:18px">More Than<br>A <em>Speech</em></h2>
+      <span class="serif rv rv-d2">Engagements with 19Keys are high-level experiential activations.</span>
+      <p class="rv rv-d2">19Keys has sold out massive venues of 25,000+ capacity and historic landmarks like the Apollo Theater (2,000+). To protect the integrity of the brand, content quality, and event outcome, organizers align with the standards of High Lvl Agency — travel, media capture, security, and community access — before a date locks.</p>
+      <div class="rv rv-d3" style="margin-top:26px;display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn-red" href="index.html#booking"><span>Submit a Booking Inquiry</span></a>
+        <a class="btn-ghost" href="mailto:19Keys@19Keys.com">19Keys@19Keys.com</a>
+      </div>
+    </div>
+    <div>
+      <div class="k-label rv" style="margin-bottom:20px">Base Engagement Rates</div>
+      <div class="rv rv-d1">
+        <div class="rate"><span class="e">Keynote Speaking</span><span class="p">$25,000+</span></div>
+        <div class="rate"><span class="e">Retreat / Partnership Experience</span><span class="p">$25,000+</span></div>
+        <div class="rate"><span class="e">Panel / Fireside Chat</span><span class="p">$19,000+</span></div>
+        <div class="rate"><span class="e">In-Person Podcast / Private Video</span><span class="p">$12,000+</span></div>
+        <div class="rate"><span class="e">Virtual Podcast / Appearance</span><span class="p">$5,000+</span></div>
+      </div>
+      <p class="eng-note rv">Starting points — adjusted on logistics, value-adds, partner infrastructure and final deal structure.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTOS -->
+<section id="photos">
+  <div class="wrap">
+    <div class="ph-head">
+      <div>
+        <div class="k-label rv">03 — Press Photography</div>
+        <h2 class="h2 rv rv-d1" style="margin-top:18px">The <em>Photos</em></h2>
+        <span class="serif rv rv-d2">Approved for flyers, programs, press, and promotion.</span>
+      </div>
+      <div class="ph-actions rv rv-d2">
+        <button class="btn-ghost" id="viewall" type="button">View All</button>
+        <a class="btn-red" href="img/19keys-press-photos.zip" download><span>Download All — .zip</span></a>
+      </div>
+    </div>
+
+    <div class="viewer rv">
+      <div class="stage" id="stage"></div>
+      <div class="vbar">
+        <span class="cap" id="vcap"></span>
+        <div class="ctl">
+          <a class="vdl" id="vdl" href="#" download>Download this photo</a>
+          <button class="vbtn" id="prev" type="button" aria-label="Previous photo">←</button>
+          <button class="vbtn" id="next" type="button" aria-label="Next photo">→</button>
+        </div>
+      </div>
+    </div>
+    <div class="thumbs" id="thumbs"></div>
+
+    <div class="grid-all" id="gridall"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap con-grid">
+    <div>
+      <div class="k-label rv">04 — Management & Contact</div>
+      <h2 class="h2 rv rv-d1" style="margin-top:18px">Route It<br><em>Right</em></h2>
+      <span class="serif rv rv-d2">For booking, partnership routing, event logistics, media deliverables, security coordination, and official management follow-up.</span>
+      <ul class="con-list rv rv-d2">
+        <li><span class="k">Management</span><span>B. Amechi — Manager, Producer & Communications Lead</span></li>
+        <li><span class="k">Booking</span><a href="mailto:19Keys@19Keys.com">19Keys@19Keys.com</a></li>
+        <li><span class="k">Direct</span><a href="mailto:amechi@addcolormedia.com">amechi@addcolormedia.com</a></li>
+        <li><span class="k">Phone</span><a href="tel:+15103815523">510.381.5523</a></li>
+        <li><span class="k">Agency</span><span>High Lvl Agency</span></li>
+      </ul>
+    </div>
+    <figure class="con-img rv rv-d2">
+      <img src="img/live/crown-red.jpg" alt="19Keys — crown portrait in red light" width="640" height="960">
+    </figure>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 19Keys · High Lvl Agency</span>
+    <span><a href="index.html" style="color:var(--silver)">19KEYS.COM</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+/* photo set: [web src, full-res download, caption] */
+var PHOTOS=[
+  ['img/live/leather.jpg','img/full/19keys-leather.jpg','Official Portrait — Black Leather'],
+  ['img/live/crown-red.jpg','img/full/19keys-crown-red.jpg','Crown Portrait — Red Light'],
+  ['img/IMG_5165.jpg','img/full/19keys-portrait-palm.jpg','Editorial — The Standard'],
+  ['img/IMG_5168.jpg','img/full/19keys-portrait-hands.jpg','Editorial — Hands'],
+  ['img/IMG_5170.jpg','img/full/19keys-portrait-focus.jpg','Editorial — Focus'],
+  ['img/IMG_5188.jpg','img/full/19keys-portrait-shades.jpg','Editorial — Shades'],
+  ['img/IMG_5206.jpg','img/full/19keys-portrait-reach.jpg','Editorial — Reach'],
+  ['img/IMG_5140.jpg','img/full/19keys-portrait-window.jpg','Editorial — Morning Light'],
+  ['img/live/sold-out.jpg','img/full/19keys-sold-out.jpg','Gramercy Theatre — Sold Out'],
+  ['img/live/the-room.jpg','img/full/19keys-the-room.jpg','The Room — On Its Feet'],
+  ['img/live/the-people.jpg','img/full/19keys-the-people.jpg','The People'],
+  ['img/live/the-stage.jpg','img/full/19keys-the-stage.jpg','On Stage'],
+  ['img/live/the-address.jpg','img/full/19keys-the-address.jpg','The Address'],
+  ['img/live/the-award.jpg','img/full/19keys-the-award.jpg','Award of Recognition'],
+  ['img/live/backstage.jpg','img/full/19keys-backstage.jpg','Backstage'],
+  ['img/live/higher-level-tour.jpg','img/full/19keys-higher-level-tour.jpg','Higher Level Tour']
+];
+var stage=document.getElementById('stage'),thumbs=document.getElementById('thumbs'),grid=document.getElementById('gridall');
+var vcap=document.getElementById('vcap'),vdl=document.getElementById('vdl');
+var cur=0,imgs=[];
+PHOTOS.forEach(function(p,i){
+  var im=new Image();im.src=p[0];im.alt=p[2];stage.appendChild(im);imgs.push(im);
+  var tb=document.createElement('button');tb.type='button';
+  var ti=new Image();ti.src=p[0];ti.alt='';tb.appendChild(ti);
+  tb.addEventListener('click',function(){go(i);});
+  thumbs.appendChild(tb);
+  var card=document.createElement('div');card.className='gcard';
+  card.innerHTML='<img src="'+p[0]+'" alt="'+p[2]+'"><div class="gbar"><span class="gname">'+p[2]+'</span><a class="gdl" href="'+p[1]+'" download>Download ↓</a></div>';
+  grid.appendChild(card);
+});
+function go(n){
+  cur=(n+PHOTOS.length)%PHOTOS.length;
+  imgs.forEach(function(im,i){im.classList.toggle('on',i===cur);});
+  thumbs.querySelectorAll('button').forEach(function(b,i){b.classList.toggle('on',i===cur);});
+  vcap.textContent=('0'+(cur+1)).slice(-2)+' / '+PHOTOS.length+' — '+PHOTOS[cur][2];
+  vdl.href=PHOTOS[cur][1];
+}
+go(0);
+document.getElementById('prev').addEventListener('click',function(){go(cur-1);});
+document.getElementById('next').addEventListener('click',function(){go(cur+1);});
+addEventListener('keydown',function(e){if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1);});
+var auto=setInterval(function(){go(cur+1);},5000);
+[stage,thumbs].forEach(function(el){el.addEventListener('click',function(){clearInterval(auto);});});
+document.getElementById('viewall').addEventListener('click',function(){
+  grid.classList.toggle('open');
+  this.textContent=grid.classList.contains('open')?'Close Grid':'View All';
+  if(grid.classList.contains('open'))grid.scrollIntoView({behavior:'smooth',block:'start'});
+});
+/* reveals */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>
