@@ -39,6 +39,26 @@
       "source": "/PHL",
       "destination": "https://phl-v2.vercel.app/",
       "statusCode": 301
+    },
+    {
+      "source": "/eth",
+      "destination": "https://ethiopia-lovat.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ETH",
+      "destination": "https://ethiopia-lovat.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ethiopia",
+      "destination": "https://ethiopia-lovat.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ETHIOPIA",
+      "destination": "https://ethiopia-lovat.vercel.app/",
+      "statusCode": 301
     }
   ]
 }
