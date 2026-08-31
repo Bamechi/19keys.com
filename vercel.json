@@ -1,0 +1,44 @@
+{
+  "redirects": [
+    {
+      "source": "/keyism",
+      "destination": "https://keyism.vercel.app/",
+      "permanent": true
+    },
+    {
+      "source": "/KEYISM",
+      "destination": "https://keyism.vercel.app/",
+      "permanent": true
+    },
+    {
+      "source": "/hlc",
+      "destination": "https://hlc-phi.vercel.app/",
+      "permanent": true
+    },
+    {
+      "source": "/HLC",
+      "destination": "https://hlc-phi.vercel.app/",
+      "permanent": true
+    },
+    {
+      "source": "/fashion",
+      "destination": "https://v0-19keysbrandportal.vercel.app/",
+      "permanent": true
+    },
+    {
+      "source": "/FASHION",
+      "destination": "https://v0-19keysbrandportal.vercel.app/",
+      "permanent": true
+    },
+    {
+      "source": "/phl",
+      "destination": "https://phl-v2.vercel.app/",
+      "permanent": true
+    },
+    {
+      "source": "/PHL",
+      "destination": "https://phl-v2.vercel.app/",
+      "permanent": true
+    }
+  ]
+}
