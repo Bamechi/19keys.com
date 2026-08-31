@@ -59,6 +59,16 @@
       "source": "/ETHIOPIA",
       "destination": "https://ethiopia-lovat.vercel.app/",
       "statusCode": 301
+    },
+    {
+      "source": "/dynasty",
+      "destination": "https://factory-keys.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/DYNASTY",
+      "destination": "https://factory-keys.vercel.app/",
+      "statusCode": 301
     }
   ]
 }
