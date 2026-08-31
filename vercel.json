@@ -3,42 +3,42 @@
     {
       "source": "/keyism",
       "destination": "https://keyism.vercel.app/",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/KEYISM",
       "destination": "https://keyism.vercel.app/",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/hlc",
       "destination": "https://hlc-phi.vercel.app/",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/HLC",
       "destination": "https://hlc-phi.vercel.app/",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/fashion",
       "destination": "https://v0-19keysbrandportal.vercel.app/",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/FASHION",
       "destination": "https://v0-19keysbrandportal.vercel.app/",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/phl",
       "destination": "https://phl-v2.vercel.app/",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/PHL",
       "destination": "https://phl-v2.vercel.app/",
-      "permanent": true
+      "statusCode": 301
     }
   ]
 }
