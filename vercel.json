@@ -1,23 +1,498 @@
 {
   "redirects": [
     {
-      "source": "/keyism",
-      "destination": "https://keyism.vercel.app/",
+      "source": "/grant",
+      "destination": "https://highlvl.19keys.com/grant",
       "statusCode": 301
     },
     {
-      "source": "/KEYISM",
-      "destination": "https://keyism.vercel.app/",
+      "source": "/GRANT",
+      "destination": "https://highlvl.19keys.com/grant",
       "statusCode": 301
     },
     {
-      "source": "/hlc",
-      "destination": "https://hlc-phi.vercel.app/",
+      "source": "/highlvl",
+      "destination": "https://highlvl.19keys.com/",
       "statusCode": 301
     },
     {
-      "source": "/HLC",
-      "destination": "https://hlc-phi.vercel.app/",
+      "source": "/HIGHLVL",
+      "destination": "https://highlvl.19keys.com/",
+      "statusCode": 301
+    },
+    {
+      "source": "/privacy",
+      "destination": "https://highlvl.19keys.com/privacy",
+      "statusCode": 301
+    },
+    {
+      "source": "/PRIVACY",
+      "destination": "https://highlvl.19keys.com/privacy",
+      "statusCode": 301
+    },
+    {
+      "source": "/termsofuse",
+      "destination": "https://highlvl.19keys.com/termsofservice",
+      "statusCode": 301
+    },
+    {
+      "source": "/TERMSOFUSE",
+      "destination": "https://highlvl.19keys.com/termsofservice",
+      "statusCode": 301
+    },
+    {
+      "source": "/newsletter",
+      "destination": "https://high-lvl-newsletter.beehiiv.com/subscribe",
+      "statusCode": 301
+    },
+    {
+      "source": "/NEWSLETTER",
+      "destination": "https://high-lvl-newsletter.beehiiv.com/subscribe",
+      "statusCode": 301
+    },
+    {
+      "source": "/events",
+      "destination": "https://highlvl.19keys.com/upcoming-events",
+      "statusCode": 301
+    },
+    {
+      "source": "/EVENTS",
+      "destination": "https://highlvl.19keys.com/upcoming-events",
+      "statusCode": 301
+    },
+    {
+      "source": "/wealth",
+      "destination": "https://highlvl.19keys.com/iws",
+      "statusCode": 301
+    },
+    {
+      "source": "/WEALTH",
+      "destination": "https://highlvl.19keys.com/iws",
+      "statusCode": 301
+    },
+    {
+      "source": "/brand",
+      "destination": "https://api.leadconnectorhq.com/widget/form/BDo9MBjRVAXzOBx9P6aI?notrack=true",
+      "statusCode": 301
+    },
+    {
+      "source": "/BRAND",
+      "destination": "https://api.leadconnectorhq.com/widget/form/BDo9MBjRVAXzOBx9P6aI?notrack=true",
+      "statusCode": 301
+    },
+    {
+      "source": "/speak",
+      "destination": "https://link.apisystem.tech/widget/form/PUgl8UHY2lsQIGXHxoNE",
+      "statusCode": 301
+    },
+    {
+      "source": "/SPEAK",
+      "destination": "https://link.apisystem.tech/widget/form/PUgl8UHY2lsQIGXHxoNE",
+      "statusCode": 301
+    },
+    {
+      "source": "/worldPartner",
+      "destination": "https://api.leadconnectorhq.com/widget/form/YJ45KK2NcWrL4xaNTdMR?notrack=true",
+      "statusCode": 301
+    },
+    {
+      "source": "/WORLDPARTNER",
+      "destination": "https://api.leadconnectorhq.com/widget/form/YJ45KK2NcWrL4xaNTdMR?notrack=true",
+      "statusCode": 301
+    },
+    {
+      "source": "/worldpartner",
+      "destination": "https://api.leadconnectorhq.com/widget/form/YJ45KK2NcWrL4xaNTdMR?notrack=true",
+      "statusCode": 301
+    },
+    {
+      "source": "/bookbundle",
+      "destination": "https://highlvl.19keys.com/19keys-ebook-bundle",
+      "statusCode": 301
+    },
+    {
+      "source": "/BOOKBUNDLE",
+      "destination": "https://highlvl.19keys.com/19keys-ebook-bundle",
+      "statusCode": 301
+    },
+    {
+      "source": "/consult",
+      "destination": "https://highlvl.19keys.com/consult",
+      "statusCode": 301
+    },
+    {
+      "source": "/CONSULT",
+      "destination": "https://highlvl.19keys.com/consult",
+      "statusCode": 301
+    },
+    {
+      "source": "/articulate",
+      "destination": "https://highlvl.19keys.com/articulate",
+      "statusCode": 301
+    },
+    {
+      "source": "/ARTICULATE",
+      "destination": "https://highlvl.19keys.com/articulate",
+      "statusCode": 301
+    },
+    {
+      "source": "/articulation",
+      "destination": "https://highlvl.19keys.com/articulate",
+      "statusCode": 301
+    },
+    {
+      "source": "/ARTICULATION",
+      "destination": "https://highlvl.19keys.com/articulate",
+      "statusCode": 301
+    },
+    {
+      "source": "/LAND",
+      "destination": "https://highlvl.19keys.com/land",
+      "statusCode": 301
+    },
+    {
+      "source": "/land",
+      "destination": "https://highlvl.19keys.com/land",
+      "statusCode": 301
+    },
+    {
+      "source": "/Land",
+      "destination": "https://highlvl.19keys.com/land",
+      "statusCode": 301
+    },
+    {
+      "source": "/trade",
+      "destination": "https://highlvl.19keys.com/trade",
+      "statusCode": 301
+    },
+    {
+      "source": "/TRADE",
+      "destination": "https://highlvl.19keys.com/trade",
+      "statusCode": 301
+    },
+    {
+      "source": "/learn",
+      "destination": "https://highlvl.19keys.com/learn",
+      "statusCode": 301
+    },
+    {
+      "source": "/LEARN",
+      "destination": "https://highlvl.19keys.com/learn",
+      "statusCode": 301
+    },
+    {
+      "source": "/Learn",
+      "destination": "https://highlvl.19keys.com/learn",
+      "statusCode": 301
+    },
+    {
+      "source": "/coffee",
+      "destination": "https://asupermind.com/",
+      "statusCode": 301
+    },
+    {
+      "source": "/COFFEE",
+      "destination": "https://asupermind.com/",
+      "statusCode": 301
+    },
+    {
+      "source": "/super",
+      "destination": "https://asupermind.com/",
+      "statusCode": 301
+    },
+    {
+      "source": "/SUPER",
+      "destination": "https://asupermind.com/",
+      "statusCode": 301
+    },
+    {
+      "source": "/science",
+      "destination": "https://highlvl.19keys.com/science",
+      "statusCode": 301
+    },
+    {
+      "source": "/SCIENCE",
+      "destination": "https://highlvl.19keys.com/science",
+      "statusCode": 301
+    },
+    {
+      "source": "/Science",
+      "destination": "https://highlvl.19keys.com/science",
+      "statusCode": 301
+    },
+    {
+      "source": "/sy-bundle",
+      "destination": "https://highlvl.19keys.com/sy-bundle",
+      "statusCode": 301
+    },
+    {
+      "source": "/SY-BUNDLE",
+      "destination": "https://highlvl.19keys.com/sy-bundle",
+      "statusCode": 301
+    },
+    {
+      "source": "/saveyourself",
+      "destination": "https://19keystour.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/SAVEYOURSELF",
+      "destination": "https://19keystour.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tour",
+      "destination": "https://19keystour.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/TOUR",
+      "destination": "https://19keystour.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/Tour",
+      "destination": "https://19keystour.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/vip",
+      "destination": "https://posh.vip/e/the-renaissance-vip-dinner",
+      "statusCode": 301
+    },
+    {
+      "source": "/VIP",
+      "destination": "https://posh.vip/e/the-renaissance-vip-dinner",
+      "statusCode": 301
+    },
+    {
+      "source": "/Vip",
+      "destination": "https://posh.vip/e/the-renaissance-vip-dinner",
+      "statusCode": 301
+    },
+    {
+      "source": "/links",
+      "destination": "https://unreleased.art/@19keys",
+      "statusCode": 301
+    },
+    {
+      "source": "/LINKS",
+      "destination": "https://unreleased.art/@19keys",
+      "statusCode": 301
+    },
+    {
+      "source": "/Links",
+      "destination": "https://unreleased.art/@19keys",
+      "statusCode": 301
+    },
+    {
+      "source": "/music",
+      "destination": "https://unreleased.art/we-the-gods",
+      "statusCode": 301
+    },
+    {
+      "source": "/MUSIC",
+      "destination": "https://unreleased.art/we-the-gods",
+      "statusCode": 301
+    },
+    {
+      "source": "/uganda",
+      "destination": "https://v0-uganda.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/UGANDA",
+      "destination": "https://v0-uganda.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/Uganda",
+      "destination": "https://v0-uganda.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ghana",
+      "destination": "https://v0-uganda.vercel.app/ghana",
+      "statusCode": 301
+    },
+    {
+      "source": "/GHANA",
+      "destination": "https://v0-uganda.vercel.app/ghana",
+      "statusCode": 301
+    },
+    {
+      "source": "/Ghana",
+      "destination": "https://v0-uganda.vercel.app/ghana",
+      "statusCode": 301
+    },
+    {
+      "source": "/pierre",
+      "destination": "https://free-pierre-rushing-campaign-187285432050.us-west1.run.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/PIERRE",
+      "destination": "https://free-pierre-rushing-campaign-187285432050.us-west1.run.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/Pierre",
+      "destination": "https://free-pierre-rushing-campaign-187285432050.us-west1.run.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/Houston",
+      "destination": "https://wavey.live/event/18jets",
+      "statusCode": 301
+    },
+    {
+      "source": "/HOUSTON",
+      "destination": "https://wavey.live/event/18jets",
+      "statusCode": 301
+    },
+    {
+      "source": "/houston",
+      "destination": "https://wavey.live/event/18jets",
+      "statusCode": 301
+    },
+    {
+      "source": "/BDAY",
+      "destination": "https://posh.vip/e/irl-cultural-silicon-19keys-birthday",
+      "statusCode": 301
+    },
+    {
+      "source": "/bday",
+      "destination": "https://posh.vip/e/irl-cultural-silicon-19keys-birthday",
+      "statusCode": 301
+    },
+    {
+      "source": "/free",
+      "destination": "https://www.ziion.io/p/unlock-ais-power-to-build-systems-and-income",
+      "statusCode": 301
+    },
+    {
+      "source": "/FREE",
+      "destination": "https://www.ziion.io/p/unlock-ais-power-to-build-systems-and-income",
+      "statusCode": 301
+    },
+    {
+      "source": "/oak",
+      "destination": "https://www.ziion.io/p/high-lvl-hackathon-and-mycom2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/OAK",
+      "destination": "https://www.ziion.io/p/high-lvl-hackathon-and-mycom2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/oakland",
+      "destination": "https://www.ziion.io/p/high-lvl-hackathon-and-mycom2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/OAKLAND",
+      "destination": "https://www.ziion.io/p/high-lvl-hackathon-and-mycom2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/scsponsor",
+      "destination": "https://culture-silicon.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/SCSPONSOR",
+      "destination": "https://culture-silicon.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/cssponsor",
+      "destination": "https://culture-silicon.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/CSSPONSOR",
+      "destination": "https://culture-silicon.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/culture",
+      "destination": "https://culture-silicon-event.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/CULTURE",
+      "destination": "https://culture-silicon-event.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/BBS",
+      "destination": "https://www.ziion.io/p/moneyinthemorning",
+      "statusCode": 301
+    },
+    {
+      "source": "/bbs",
+      "destination": "https://www.ziion.io/p/moneyinthemorning",
+      "statusCode": 301
+    },
+    {
+      "source": "/master",
+      "destination": "https://investfest-mastermind.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/MASTER",
+      "destination": "https://investfest-mastermind.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/invest",
+      "destination": "https://19keysxinvestfest.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/INVEST",
+      "destination": "https://19keysxinvestfest.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/investfest",
+      "destination": "https://19keysxinvestfest.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/INVESTFEST",
+      "destination": "https://19keysxinvestfest.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mastermind",
+      "destination": "https://investfest-mastermind.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/MASTERMIND",
+      "destination": "https://investfest-mastermind.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ask",
+      "destination": "https://ask.19keys.com/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ASK",
+      "destination": "https://ask.19keys.com/",
+      "statusCode": 301
+    },
+    {
+      "source": "/a19",
+      "destination": "https://a19-minimal.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/A19",
+      "destination": "https://a19-minimal.vercel.app/",
       "statusCode": 301
     },
     {
@@ -31,13 +506,13 @@
       "statusCode": 301
     },
     {
-      "source": "/phl",
-      "destination": "https://phl-v2.vercel.app/",
+      "source": "/keyism",
+      "destination": "https://keyism.vercel.app/",
       "statusCode": 301
     },
     {
-      "source": "/PHL",
-      "destination": "https://phl-v2.vercel.app/",
+      "source": "/KEYISM",
+      "destination": "https://keyism.vercel.app/",
       "statusCode": 301
     },
     {
@@ -51,13 +526,73 @@
       "statusCode": 301
     },
     {
+      "source": "/ETHIOPIA",
+      "destination": "https://ethiopia-lovat.vercel.app/",
+      "statusCode": 301
+    },
+    {
       "source": "/ethiopia",
       "destination": "https://ethiopia-lovat.vercel.app/",
       "statusCode": 301
     },
     {
-      "source": "/ETHIOPIA",
-      "destination": "https://ethiopia-lovat.vercel.app/",
+      "source": "/hack",
+      "destination": "https://ziion.io/events",
+      "statusCode": 301
+    },
+    {
+      "source": "/HACK",
+      "destination": "https://ziion.io/events",
+      "statusCode": 301
+    },
+    {
+      "source": "/hackathon",
+      "destination": "https://ziion.io/events",
+      "statusCode": 301
+    },
+    {
+      "source": "/HACKATHON",
+      "destination": "https://ziion.io/events",
+      "statusCode": 301
+    },
+    {
+      "source": "/phl",
+      "destination": "https://phl-v2.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/PHL",
+      "destination": "https://phl-v2.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/vanta",
+      "destination": "https://creatorgrowth-alpha.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/VANTA",
+      "destination": "https://creatorgrowth-alpha.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/creator",
+      "destination": "https://creatorgrowth-alpha.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/CREATOR",
+      "destination": "https://creatorgrowth-alpha.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hike",
+      "destination": "https://www.ziion.io/p/supermind-hike",
+      "statusCode": 301
+    },
+    {
+      "source": "/HIKE",
+      "destination": "https://www.ziion.io/p/supermind-hike",
       "statusCode": 301
     },
     {
@@ -68,6 +603,36 @@
     {
       "source": "/DYNASTY",
       "destination": "https://factory-keys.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/africa",
+      "destination": "https://africaplus.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/AFRICA",
+      "destination": "https://africaplus.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hlc",
+      "destination": "https://hlc-phi.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/HLC",
+      "destination": "https://hlc-phi.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ai",
+      "destination": "https://highlvlai.vercel.app/",
+      "statusCode": 301
+    },
+    {
+      "source": "/AI",
+      "destination": "https://highlvlai.vercel.app/",
       "statusCode": 301
     }
   ]
