@@ -567,12 +567,12 @@
     },
     {
       "source": "/vanta",
-      "destination": "https://creatorgrowth-alpha.vercel.app/",
+      "destination": "https://creatorgrowth-vant-ainvite.vercel.app/",
       "statusCode": 301
     },
     {
       "source": "/VANTA",
-      "destination": "https://creatorgrowth-alpha.vercel.app/",
+      "destination": "https://creatorgrowth-vant-ainvite.vercel.app/",
       "statusCode": 301
     },
     {
